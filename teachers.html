@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scholarships details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mystyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    .carddiv {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      min-width: fit-content;
+      flex-wrap: wrap;
+      margin-top: 3%;
+    }
+    .section-title {
+      font-size: 4rem;
+      font-weight: 500;
+      color: black;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      text-align: center;
+    }
+    .section-title span {
+      color: crimson;
+      width: 100%;
+    }
+    /* Hero Section */
+    #hero {
+      background-image: url(images/teachers_images/hero-bg.png);
+      height: 700px;
+      background-size: cover;
+      background-position: top center;
+      position: relative;
+      z-index: 1;
+      margin: auto;
+      /* width: 100%; */
+    }
+    #hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      opacity: 0.7;
+      z-index: -1;
+    }
+    #hero .hero {
+      max-width: 1200px;
+      margin: 0; /* margin: 0 auto; */
+      padding: 0 50px;
+      justify-content: flex-start;
+    }
+    #hero h1 {
+      display: block;
+      width: fit-content;
+      font-size: 4rem;
+      position: relative;
+      color: transparent;
+      animation: text_reveal 0.5s ease forwards;
+      animation-delay: 1s;
+    }
+    #hero h1:nth-child(1) {
+      animation-delay: 1s;
+    }
+    #hero h1:nth-child(2) {
+      animation-delay: 2s;
+    }
+    #hero h1:nth-child(3) {
+      animation: text_reveal_name 0.5s ease forwards;
+      animation-delay: 3s;
+    }
+    #hero h1 span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: crimson;
+      animation: text_reveal_box 1s ease;
+      animation-delay: 0.5s;
+    }
+    #hero h1:nth-child(1) span {
+      animation-delay: 0.5s;
+    }
+    #hero h1:nth-child(2) span {
+      animation-delay: 1.5s;
+    }
+    #hero h1:nth-child(3) span {
+      animation-delay: 2.5s;
+    }
+    @keyframes text_reveal_box {
+      50% {
+        width: 100%;
+        left: 0;
+      }
+      100% {
+        width: 0;
+        left: 100%;
+      }
+    }
+    @keyframes text_reveal {
+      100% {
+        color: white;
+      }
+    }
+    @keyframes text_reveal_name {
+      100% {
+        color: crimson;
+        font-weight: 500;
+      }
+    }
+    /* End Hero Section */
+
+    /* Services Section */
+    #services .services {
+      flex-direction: column;
+      text-align: center;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 100px 0;
+    }
+    #services .service-top {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    #services .service-bottom {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      /* flex-wrap: wrap; */
+      margin-top: 50px;
+    }
+    #services .service-item-1 {
+      width: 80%;
+      flex-basis: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 90px;
+      border-radius: 20px;
+      background-image: url(images/teachers_images/school-building-empty-front-yard-260nw-1040146726.jpg);
+      background-size: cover;
+      margin: 10px 10px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    #services .service-item-1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+      opacity: 0.65;
+      z-index: -1;
+    }
+    #services .service-item-2 {
+      width: 80%;
+      flex-basis: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 90px;
+      border-radius: 20px;
+      background-image: url(images/teachers_images/download.jpeg);
+      background-size: cover;
+      margin: 10px 10px;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    #services .service-item-2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+      opacity: 0.65;
+      z-index: -1;
+    }
+
+    #services .service-item-1 h2 {
+      font-size: 3.4rem;
+      color: white;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    #services .service-item-1 p {
+      color: white;
+      text-align: left;
+      font-size: 2.4rem;
+    }
+    #services .service-item-2 h2 {
+      font-size: 3.4rem;
+      color: white;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    #services .service-item-2 p {
+      color: white;
+      text-align: left;
+      font-size: 2.4rem;
+    }
+    /* End Services Section */
+
+    /* Projects section  */
+    .timeline-a {
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+      opacity: 1;
+    }
+    .container-a {
+      padding: 10px 50px;
+      position: relative;
+      width: 50%;
+      animation: movedown 1s linear forwards;
+      opacity: 0;
+    }
+    @keyframes movedown {
+      0% {
+        opacity: 1;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    .text-box-a {
+      padding: 20px 30px;
+      background: wheat;
+      position: relative;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    .left-container {
+      left: 0;
+    }
+    .right-container {
+      left: 50%;
+    }
+    .img-a {
+      position: absolute;
+      width: 45px;
+      border-radius: 50%;
+      right: -20px;
+      top: 32px;
+      z-index: 10;
+      border: 3px solid black;
+    }
+    .right-container .img-a {
+      left: -20px;
+    }
+
+    .timeline-a::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 100%;
+      background-color: black;
+      top: 0;
+      left: 50%;
+      margin-left: -3px;
+      z-index: -1;
+      animation: moveline 6s linear forwards;
+    }
+    @keyframes moveline {
+      0% {
+        height: 0;
+      }
+      100% {
+        height: 100%;
+      }
+    }
+    .text-box-a h2 {
+      font-weight: 600;
+    }
+    .text-box-a small {
+      font-size: larger;
+      display: inline-block;
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+    .left-container-arrow {
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 28px;
+      z-index: 1;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid #fff;
+      right: -15px;
+    }
+    .right-container-arrow {
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 28px;
+      z-index: 1;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 15px solid #fff;
+      left: -15px;
+    }
+    .container-a:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .container-a:nth-child(2) {
+      animation-delay: 1s;
+    }
+    .container-a:nth-child(3) {
+      animation-delay: 1s;
+    }
+    .container-a:nth-child(4) {
+      animation-delay: 1s;
+    }
+    .container-a:nth-child(5) {
+      animation-delay: 1s;
+    }
+    .container-a:nth-child(6) {
+      animation-delay: 1s;
+    }
+
+    #projects .projects {
+      flex-direction: column;
+      /* max-width: 1200px; */
+      width: 100%;
+      margin: 0 auto;
+      padding: 100px 0;
+    }
+    #projects .projects-header h1 {
+      margin-bottom: 50px;
+    }
+    #projects .all-projects {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #projects .project-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 80%;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    #projects .project-info {
+      padding: 20px;
+      flex-basis: 50%;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+      color: white;
+    }
+
+    #projects .project-info h1 {
+      font-size: 4rem;
+      font-weight: 500;
+    }
+    #projects .project-info h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+    #projects .project-info p {
+      color: white;
+      font-size: 2.5em;
+    }
+    #projects .project-img {
+      flex-basis: 35%;
+      height: 100%;
+    }
+    #projects .project-img:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+      opacity: 0.5;
+    }
+    #projects .project-img img {
+      transition: 0.3s ease transform;
+    }
+    #projects .project-item:hover .project-img img {
+      transform: scale(1.1);
+    }
+
+    /* On Scroll  */
+    .hidden {
+      opacity: 0;
+      /* transform: translateY(35%); */
+      transition: all 6s;
+    }
+    .hidden-a {
+      opacity: 0;
+      /* transform: translateY(35%); */
+      transition: all 1s;
+    }
+
+    /* End Projects section */
+
+    /* contact Section */
+    #contact .contact {
+      flex-direction: column;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 90%;
+    }
+    #contact .contact-items {
+      width: 100%;
+      display: flex;
+    }
+    #contact .contact-item {
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0px 0px 18px 0 #0000002c;
+      transition: 0.3s ease box-shadow;
+    }
+    #contact .contact-item:hover {
+      box-shadow: 0px 0px 5px 0 #0000002c;
+    }
+    #contact .icon {
+      width: 70px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    #contact .contact-info h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    #contact .contact-info h2 {
+      font-size: 1.3rem;
+      line-height: 2rem;
+      font-weight: 500;
+    }
+    /*End contact Section */
+
+    @media screen and (max-width: 768px) {
+      .timeline-a {
+        margin: 50px auto;
+      }
+      .timeline-a::after {
+        left: 31px;
+      }
+      .container-a {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+      }
+      .text-box-a {
+        font-size: 13px;
+      }
+      .text-box-a small {
+        margin-bottom: 10px;
+      }
+      .right-container {
+        left: 0;
+      }
+      .right-container .img-a {
+        left: 10px;
+      }
+      .left-container img,
+      .right-container img {
+        left: 10px;
+      }
+      .left-container-arrow,
+      .right-container-arrow {
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+      }
+      #contact .contact-items {
+        flex-direction: column;
+      }
+      #contact .contact-info h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      #contact .contact-info h2 {
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 500;
+      }
+    }
+  </style>
+  <body>
+    <!-- navbar start -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="background-color: #1b244d"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index"
+          ><img
+            src="images/logo.png"
+            alt="Can't load"
+            style="height: 50px; width: 170px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="background-color: #ffcc57"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="index"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="appointment">Appointment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="scholarship"
+                >Scholarship</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="demo">Study Material</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #ffcc57" href="teachers"
+                >Teachers</a
+              >
+            </li>
+            <li>
+              <a class="nav-link text-white" href="about">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- page header -->
+    <div class="page_head">
+      <ol class="breadcumb">
+        <li><a href="index">Home</a></li>
+        <li>>></li>
+        <li class="active">Teachers</li>
+      </ol>
+    </div>
+
+    <!-- Hero Section  -->
+    <section id="hero">
+      <div class="hero container-about">
+        <div>
+          <h1>Hello, <span></span></h1>
+          <h1>My Name is <span></span></h1>
+          <h1>Tarang <span></span></h1>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Section  -->
+
+    <!-- Service Section -->
+    <section id="services">
+      <div class="services container-about">
+        <div class="service-top">
+          <h1 class="headings">Educ<span>a</span>tion</h1>
+        </div>
+        <div class="service-bottom">
+          <div class="service-item-1">
+            <h2>School</h2>
+            <p>Somalwar High School, Ramdaspeth, Nagpur (2019)</p>
+          </div>
+          <div class="service-item-2">
+            <h2>COLLEGE</h2>
+            <p>Integrated MSc in Mathematics-SVNIT Surat (2020-Present)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Service Section -->
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="projects container-about">
+        <div class="projects-header">
+          <h1 class="headings"><span>Achievements</span></h1>
+        </div>
+        <section class="achievements">
+          <div class="hidden">
+            <div class="hidden-a left-container">
+              <img src="images/teachers_images/biochemist.png" class="img-a" />
+              <div class="text-box-a">
+                <h2>Australian Chemistry Quiz</h2>
+                <small>2015</small>
+                <p>Got High Distinction in Australian Chemistry Quiz</p>
+                <span class="left-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="hidden-a right-container">
+              <img src="images/teachers_images/ntse.png" class="img-a" />
+              <div class="text-box-a righttext-box">
+                <h2>NTSE</h2>
+                <small>2016</small>
+                <p>Cleared NTSE stage 1 in 2016</p>
+                <span class="right-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="hidden-a left-container">
+              <img
+                src="images/teachers_images/jee-advanced logo.png"
+                class="img-a"
+              />
+              <div class="text-box-a">
+                <h2>JEE ADVANCE</h2>
+                <small>2020</small>
+                <p>Secured AIR 6068</p>
+                <span class="left-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="hidden-a right-container">
+              <img src="images/teachers_images/nest logo.png" class="img-a" />
+              <div class="text-box-a righttext-box">
+                <h2>NEST</h2>
+                <small>2020</small>
+                <p>
+                  Selected for NISER and UM-DAE with an AIR 186 in NEST 2020
+                </p>
+                <span class="right-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="hidden-a left-container">
+              <img src="images/teachers_images/iim logo.png" class="img-a" />
+              <div class="text-box-a">
+                <h2>IPMAT</h2>
+                <small>2020</small>
+                <p>Cleared IIM Indore IPMAT 2020</p>
+                <span class="left-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="hidden-a right-container">
+              <img src="images/teachers_images/power logo.png" class="img-a" />
+              <div class="text-box-a righttext-box">
+                <h2>Powerlifting</h2>
+                <small>2022</small>
+                <p>
+                  Level 1 Certified Fitness Trainer and Nutrition Specialist and
+                  Gold medal in Gujarat State Powerlifting Championship 2022
+                </p>
+                <span class="right-container-arrow"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("hidden");
+            entry.target.classList.add("timeline-a");
+          }
+          // else{
+          // 	// entry.target.classList.add('hidden');
+          // 	entry.target.classList.remove('timeline-a');
+          // }
+        });
+      });
+      const observerContainer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("hidden-a");
+            entry.target.classList.add("container-a");
+          }
+          // else{
+          // 	// entry.target.classList.add('hidden');
+          // 	entry.target.classList.remove('timeline-a');
+          // }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((el) => observer.observe(el));
+      const hiddenConatiner = document.querySelectorAll(".hidden-a");
+      hiddenConatiner.forEach((el) => observerContainer.observe(el));
+    </script>
+    <!-- End Projects Section -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact container-about">
+        <div>
+          <h1 class="headings">Contact <span>info</span></h1>
+        </div>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="icon">
+              <img src="images/teachers_images/phone.png" />
+            </div>
+            <div class="contact-info">
+              <h1>Phone</h1>
+              <h2>766663804</h2>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">
+              <img
+                src="images/teachers_images/email.png"
+              />
+            </div>
+            <div class="contact-info">
+              <h1>Email</h1>
+              <h2>tarangbombale01@gmail.com</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Contacts Section    -->
+
+    <hr />
+
+    <!-- Footer -->
+    <footer
+      class="py-5"
+      style="
+        padding: 5%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+      "
+    >
+      <div class="row">
+        <div class="col-6 col-md-6 mb-3">
+          <img
+            src="images/logo.png"
+            alt="Can't load"
+            style="height: 50px; width: 200px; margin-left: -32px"
+          />
+          <br />
+
+          <div style="position: relative; top: 22px">Follow Us :</div>
+          <div class="wrapper" style="position: relative; left: 150px">
+            <div class="one">
+              <button class="button">
+                <i class="ri-share-line"></i>
+              </button>
+            </div>
+            <div class="two">
+              <ul class="list">
+                <li class="item">
+                  <a href="#" class="link ig">
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                </li>
+                <li class="item" style="--d: 0.25s">
+                  <a href="#" class="link tw">
+                    <i class="ri-twitter-line"></i>
+                  </a>
+                </li>
+                <li class="item" style="--d: 0.5s">
+                  <a href="#" class="link sc">
+                    <i class="ri-snapchat-line"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            const btnEl = document.querySelector(".button");
+            const toggleOptions = () => {
+              const wrapperEl = document.querySelector(".wrapper");
+              const iconEl = btnEl.querySelector("i");
+
+              wrapperEl.classList.toggle("activ");
+
+              if (iconEl.classList.contains("ri-share-line")) {
+                iconEl.classList.replace("ri-share-line", "ri-close-line");
+              } else {
+                iconEl.classList.replace("ri-close-line", "ri-share-line");
+              }
+            };
+            btnEl.addEventListener("click", toggleOptions);
+          </script>
+          <br /><br /><br /><br />
+
+          <h3>Important Links</h3>
+          <ul class="nav">
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="index" class="nav-link p-0 text-white">Home</a>
+            </li>
+
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="terms" class="nav-link p-0 text-white"
+                >Terms & Conditions</a
+              >
+            </li>
+
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="privacy" class="nav-link p-0 text-white"
+                >Privacy Policy</a
+              >
+            </li>
+
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="refund" class="nav-link p-0 text-white"
+                >Refund & Cancellation Policy</a
+              >
+            </li>
+
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="about" class="nav-link p-0 text-white">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                id="newsletter1"
+                type="email"
+                class="form-control"
+                placeholder="Email address"
+              />
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br />
+
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+      >
+        <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduCave</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="mystyle.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-transform: capitalize;
+      font-weight: normal;
+    }
+
+    body {
+      background: #eee;
+      overflow-x: hidden;
+    }
+
+    .cont {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 15px;
+      align-items: flex-start;
+      padding: 5px 5%;
+    }
+    
+    .cont .main-video {
+      background: #fff;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .cont .main-video video {
+      width: 100%;
+      border-radius: 5px;
+    }
+    
+    .cont .main-video .title {
+      color: #333;
+      font-size: 23px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .cont .video-list {
+      background: #fff;
+      border-radius: 5px;
+      height: 244px;
+      overflow-y: scroll;
+      box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .cont .video-list::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    .cont .video-list::-webkit-scrollbar-track {
+      background: #ccc;
+      border-radius: 50px;
+    }
+
+    .cont .video-list::-webkit-scrollbar-thumb {
+      background: #666;
+      border-radius: 50px;
+    }
+
+    .cont .video-list .vid video {
+      width: 100px;
+      border-radius: 5px;
+    }
+
+
+
+    .cont .video-list .vid {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #f7f7f7;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .cont .video-list .vid:hover {
+      background: #eee;
+    }
+
+    .cont .video-list .active {
+      background: #2980b9;
+    }
+
+    .cont .video-list .vid .title {
+      color: #333;
+      font-size: 17px;
+    }
+
+    .cont .video-list .active .title {
+      color: #fff;
+    }
+
+    .cont .video-list .active:hover {
+      background: #2980b9;
+      /* .title {
+        color: #333;
+      } */
+    }
+
+    @media (max-width: 768px) {
+      .cont {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .notes:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1b244d">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index"><img src="images/logo.png" alt="Can't load"
+          style="height: 50px; width: 170px" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        style="background-color: #ffcc57">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="index">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="appointment">Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="scholarship">Scholarship</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #ffcc57" href="demo">Study Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="teachers"
+              >Teachers</a
+            >
+          </li>
+          <li>
+            <a class="nav-link text-white" href="about">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- page header -->
+  <div class="page_head">
+    <ol class="breadcumb">
+      <li><a href="index">Home</a></li>
+      <li>>></li>
+      <li class="active">Study Material</li>
+    </ol>
+  </div>
+
+  <div class="headings hidden" style="margin:30px;">
+    <h1>Video Lectures</h1>
+  </div>
+  <div class="cont">
+    <div class="main-video hidden">
+      <video src="videos/1.mp4" controls muted poster="images/demo_images/pic1.png"></video>
+      <h3 class="title" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">lecture-01</h3>
+    </div>
+
+    <div class="video-list hidden">
+      <div class="vid active hidden">
+        <video src="videos/1.mp4" muted poster="images/demo_images/pic1.png"></video>
+        <h3 class="title hidden" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">lecture-01</h3>
+      </div>
+      <div class="vid hidden">
+        <video src="videos/2.mp4" muted poster="images/demo_images/pic2.png"></video>
+        <h3 class="title hidden" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">lecture-02</h3>
+      </div>
+      <div class="vid hidden">
+        <video src="videos/3.mp4" muted poster="images/demo_images/pic3.png"></video>
+        <h3 class="title hidden" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">lecture-03</h3>
+      </div>
+    </div>
+  </div>
+  <script>
+    let listVideo = document.querySelectorAll(".video-list .vid");
+    let mainVideo = document.querySelector(".main-video video");
+    let title = document.querySelector(".main-video .title");
+
+    listVideo.forEach((video) => {
+      video.onclick = () => {
+        listVideo.forEach((vid) => vid.classList.remove("active"));
+        video.classList.add("active");
+        if (video.classList.contains("active")) {
+          let src = video.children[0].getAttribute("src");
+          mainVideo.src = src;
+          let text = video.children[1].innerHTML;
+          title.innerHTML = text;
+        }
+      };
+    });
+  </script>
+
+  <br>
+  <!-- Lecture Notes -->
+  <div class="headings hidden" style="margin-bottom:45px;">
+    <h1>Lecture Notes</h1>
+  </div>
+  <div style="display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 45px;">
+    <div class="card notes hidden" style="width: 15rem;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;">
+      <img src="images/demo_images/pic1.png" class="card-img-top" alt="Can't Load">
+      <div class="card-body hidden">
+        <h5 class="card-title">Rotational Motion</h5>
+        <p class="card-text">Unravel the dynamics of rotational motion through our focused notes, illuminating key
+          principles and applications for a profound understanding.</p>
+      </div>
+      <div class="card-body hidden">
+        <a type="button" class="btn btn-primary btn-lg" href="notes/21 july.pdf">View</a>
+        <a type="button" class="btn btn-secondary btn-lg" href="notes/21 july.pdf" style="float: inline-end;"
+          download>Download</a>
+      </div>
+    </div>
+    <div class="card notes hidden" style="width: 15rem;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;">
+      <img src="images/demo_images/pic2.png" class="card-img-top" alt="Can't Load">
+      <div class="card-body hidden">
+        <h5 class="card-title">Thermodynamics</h5>
+        <p class="card-text">Master thermodynamics principles with our concise notes, unraveling energy and matter
+          dynamics for academic success and applications.</p>
+      </div>
+      <div class="card-body hidden">
+        <a type="button" class="btn btn-primary btn-lg" href="notes/Doc5.pdf">View</a>
+        <a type="button" class="btn btn-secondary btn-lg" href="notes/Doc5.pdf" style="float: inline-end;"
+          download>Download</a>
+      </div>
+    </div>
+    <div class="card notes hidden" style="width: 15rem;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;">
+      <img src="images/demo_images/pic3.png" class="card-img-top" alt="Can't Load">
+      <div class="card-body hidden">
+        <h5 class="card-title">Nuclear Physics</h5>
+        <p class="card-text">Explore nuclear physics nuances with our concise notes, unraveling atomic mysteries for
+          academic excellence and practical understanding.</p>
+      </div>
+      <div class="card-body hidden">
+        <a type="button" class="btn btn-primary btn-lg" href="notes/july 4.pdf">View</a>
+        <a type="button" class="btn btn-secondary btn-lg" href="notes/july 4.pdf" style="float: inline-end;"
+          download>Download</a>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="py-5" style="
+        padding: 5%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+      ">
+    <div class="row">
+      <div class="col-6 col-md-6 mb-3">
+        <img src="images/logo.png" alt="Can't load" style="height: 50px; width: 200px; margin-left: -32px" />
+        <br />
+
+        <div style="position: relative; top: 22px">Follow Us :</div>
+        <div class="wrapper" style="position: relative; left: 150px">
+          <div class="one">
+            <button class="button">
+              <i class="ri-share-line"></i>
+            </button>
+          </div>
+          <div class="two">
+            <ul class="list">
+              <li class="item">
+                <a href="#" class="link ig">
+                  <i class="ri-instagram-line"></i>
+                </a>
+              </li>
+              <li class="item" style="--d: 0.25s">
+                <a href="#" class="link tw">
+                  <i class="ri-twitter-line"></i>
+                </a>
+              </li>
+              <li class="item" style="--d: 0.5s">
+                <a href="#" class="link sc">
+                  <i class="ri-snapchat-line"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <script>
+          const btnEl = document.querySelector(".button");
+          const toggleOptions = () => {
+            const wrapperEl = document.querySelector(".wrapper");
+            const iconEl = btnEl.querySelector("i");
+
+            wrapperEl.classList.toggle("activ");
+
+            if (iconEl.classList.contains("ri-share-line")) {
+              iconEl.classList.replace("ri-share-line", "ri-close-line");
+            } else {
+              iconEl.classList.replace("ri-close-line", "ri-share-line");
+            }
+          };
+          btnEl.addEventListener("click", toggleOptions);
+        </script>
+        <br /><br /><br /><br />
+
+        <h3>Important Links</h3>
+        <ul class="nav">
+          <li class="nav-item mb-2" style="margin-right: 15px">
+            <a href="index" class="nav-link p-0 text-white">Home</a>
+          </li>
+
+          <li class="nav-item mb-2" style="margin-right: 15px">
+            <a href="terms" class="nav-link p-0 text-white">Terms & Conditions</a>
+          </li>
+
+          <li class="nav-item mb-2" style="margin-right: 15px">
+            <a href="privacy" class="nav-link p-0 text-white">Privacy Policy</a>
+          </li>
+
+          <li class="nav-item mb-2" style="margin-right: 15px">
+            <a href="refund" class="nav-link p-0 text-white">Refund & Cancellation Policy</a>
+          </li>
+
+          <li class="nav-item mb-2" style="margin-right: 15px">
+            <a href="about" class="nav-link p-0 text-white">About</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="email" class="form-control" placeholder="Email address" />
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br />
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="scroll.js"></script>
+
+</html>

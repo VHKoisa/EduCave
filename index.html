@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduCave</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+
+  <body>
+    <!-- navbar start -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="background-color: #1b244d"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index"
+          ><img
+            src="images/logo.png"
+            alt="Can't load"
+            style="height: 50px; width: 170px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="background-color: #ffcc57"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                style="color: #ffcc57"
+                aria-current="page"
+                href="/index"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/appointment">Appointment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/scholarship">Scholarship</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="demo">Study Material</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="teachers"
+                >Teachers</a
+              >
+            </li>
+            <li>
+              <a class="nav-link text-white" href="/about">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- alert start -->
+    <div
+      class="alert alert-warning alert-dismissible fade show my-0"
+      style="background-color: #ffcc57"
+      role="alert"
+    >
+      <strong>Hey There!</strong>&nbsp;Please checkout our new scholarship
+      details from above link.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <!-- alert end -->
+    <!-- carousel start -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="images/cr3.jpg"
+            class="d-block w-100 img-fluid"
+            alt="Can't load"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/cr4.jpg"
+            class="d-block w-100 img-fluid"
+            alt="Can't load"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/cr1.jpg"
+            class="d-block w-100 img-fluid"
+            alt="Can't load"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/cr2.jpg"
+            class="d-block w-100 img-fluid"
+            alt="Can't load"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- carousel end -->
+    <!-- course heading  -->
+    <div class="headings hidden">
+      <h1>Available Courses</h1>
+    </div>
+
+    <!-- courses start -->
+    <!-- Engineering course -->
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item hidden">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed my-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+            style="background-color: #435bc2"
+          >
+            <h6
+              style="
+                color: white;
+                font-weight: bold;
+                font-size: large;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+            >
+              EduCave Special Engineering Entrance course<span
+                style="color: #ffcc57; font-size: medium"
+                >&nbsp;For Class 9<sup>th</sup> to 12<sup>th</sup> studying &
+                Class 12<sup>th</sup> passed</span
+              >
+            </h6>
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <ul style="line-height: 23px; font-weight: bold; padding: 0px 15px">
+              <li style="font-weight: 500">
+                Two-Year Integrated Classroom Course for JEE - Main &amp;
+                Advanced (For Class 10th Studying Students moving to Class 11th)
+              </li>
+              <li style="font-weight: 500">
+                One-Year Integrated Classroom Course for JEE Main &amp; Advanced
+                (For Class 11th Studying Students moving to Class 12th)
+              </li>
+              <li style="font-weight: 500">
+                Power Step&nbsp;Integrated Classroom Course for JEE Main &amp;
+                Advanced (For Class 12th Passed Students)
+              </li>
+              <li style="font-weight: 500">
+                Integrated Classroom Course for Class X to XII, JEE(Main &amp;
+                Advanced), Olympiads, KVPY &amp; NTSE
+              </li>
+              <li style="font-weight: 500">
+                Integrated Classroom course for Class IX to XII, JEE(Main &amp;
+                Advanced), Olympiads, KVPY &amp; NTSE
+              </li>
+            </ul>
+            <table
+              class="table table-bordered table-striped"
+              style="line-height: 23px"
+              width="80%"
+            >
+              <tbody>
+                <tr>
+                  <td><b>Course Highlights</b></td>
+                  <td><b>Additional Benefits </b></td>
+                </tr>
+                <tr>
+                  <td>
+                    Coverage and revision of Class 11th and Class 12th syllabus
+                  </td>
+                  <td>Final Test Series</td>
+                </tr>
+                <tr>
+                  <td>Thorough preparation for school/board exams</td>
+                  <td>Success Achiever Question Bank for JEE Main</td>
+                </tr>
+                <tr>
+                  <td>Regular tests on school/board as well as JEE pattern</td>
+                  <td>Success Magnet Question Bank for JEE</td>
+                </tr>
+                <tr>
+                  <td>Extensive and in-depth study material</td>
+                  <td>Archive for JEE Main and Advanced</td>
+                </tr>
+                <tr>
+                  <td>NCERT Maps for quick and thorough revision of NCERT</td>
+                  <td colspan="2">EduTutor Lab Facility</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Medical course -->
+      <div class="accordion-item hidden">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed my-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+            style="background-color: #435bc2"
+          >
+            <h6
+              style="
+                color: white;
+                font-weight: bold;
+                font-size: large;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+            >
+              EduCave Special Medical Entrance course<span
+                style="color: #ffcc57; font-size: medium"
+                >&nbsp;For Class 9<sup>th</sup> to 12<sup>th</sup> studying &
+                Class 12<sup>th</sup> passed</span
+              >
+            </h6>
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <ul style="line-height: 23px; font-weight: bold; padding: 0px 15px">
+              <li style="font-weight: 500; margin: 0px !important">
+                Two-Year Integrated Classroom Course for NEET (For Class 10th
+                Studying Students moving to Class 11th)
+              </li>
+              <li style="font-weight: 500">
+                One-Year Integrated Classroom Course for NEET (For Class 11th
+                Studying Students moving to Class 12th)
+              </li>
+              <li style="font-weight: 500">
+                Regular Classroom Course for NEET (For Class 12th Passed
+                Students)
+              </li>
+              <li style="font-weight: 500">
+                Integrated Classroom Course for Class X to XII, NEET, Olympiads,
+                KVPY &amp; NTSE
+              </li>
+              <li style="font-weight: 500">
+                Integrated Classroom Course for Class IX to XII, NEET,
+                Olympiads, KVPY &amp; NTSE
+              </li>
+            </ul>
+            <table
+              class="table table-bordered table-striped"
+              style="line-height: 23px"
+              width="80%"
+            >
+              <tbody>
+                <tr>
+                  <td><b>Course Highlights</b></td>
+                  <td><b>Additional Benefits </b></td>
+                </tr>
+                <tr>
+                  <td>
+                    Coverage and revision of Class 11th and Class 12th syllabus
+                  </td>
+                  <td>Test Series Course for NEET preparation</td>
+                </tr>
+                <tr>
+                  <td>Thorough preparation for school/board exams</td>
+                  <td>Question Bank for NEET</td>
+                </tr>
+                <tr>
+                  <td>Regular tests on school/board as well as NEET pattern</td>
+                  <td>NEET Challenger App</td>
+                </tr>
+                <tr>
+                  <td>Extensive and in-depth study material</td>
+                  <td>EduTutor Lab Facility</td>
+                </tr>
+                <tr>
+                  <td>NCERT Maps for quick and thorough revision of NCERT</td>
+                  <td>Books for Crash Course &amp; Repeater Course</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Board Course -->
+      <div class="accordion-item hidden">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed my-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFour"
+            aria-expanded="false"
+            aria-controls="collapseFour"
+            style="background-color: #435bc2"
+          >
+            <h6
+              style="
+                color: white;
+                font-weight: bold;
+                font-size: large;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+            >
+              EduCave Special NCERT course<span
+                style="color: #ffcc57; font-size: medium"
+                >&nbsp;For Class 11<sup>th</sup> & Class 12<sup>th</sup></span
+              >
+            </h6>
+          </button>
+        </h2>
+        <div
+          id="collapseFour"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <ul style="line-height: 23px; font-weight: bold; padding: 0px 15px">
+              <li style="font-weight: 500; margin: 0px !important">
+                One-Year Integrated Classroom Course for NCERT (For Class 10th
+                Studying Students moving to Class 11th)
+              </li>
+              <li style="font-weight: 500">
+                One-Year Integrated Classroom Course for CBSE Boards (For Class
+                11th Studying Students moving to Class 12th)
+              </li>
+              <li style="font-weight: 500">
+                One-Year Integrated Classroom Course for CBSE Repeaters
+              </li>
+            </ul>
+            <table
+              class="table table-bordered table-striped"
+              style="line-height: 23px"
+              width="80%"
+            >
+              <tbody>
+                <tr>
+                  <td><b>Course Highlights</b></td>
+                  <td><b>Additional Benefits </b></td>
+                </tr>
+                <tr>
+                  <td>
+                    Coverage and revision of Class 11th and Class 12th syllabus
+                  </td>
+                  <td>Test Series Course for school/board preparation</td>
+                </tr>
+                <tr>
+                  <td>Thorough preparation for school/board exams</td>
+                  <td>Practice MCQs modules for school/board exams</td>
+                </tr>
+                <tr>
+                  <td>Regular tests on school/board</td>
+                  <td>Question Bank based on NCERT</td>
+                </tr>
+                <tr>
+                  <td>Extensive and in-depth study material</td>
+                  <td>Books for Crash Course &amp; Repeater Course</td>
+                </tr>
+                <tr>
+                  <td>NCERT Maps for quick and thorough revision of NCERT</td>
+                  <td>EduTutor Lab Facility</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Foundation course -->
+      <div class="accordion-item hidden">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed my-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFive"
+            aria-expanded="false"
+            aria-controls="collapseFive"
+            style="background-color: #435bc2"
+          >
+            <h6
+              style="
+                color: white;
+                font-weight: bold;
+                font-size: large;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+            >
+              EduCave Special Foundation Courses<span
+                style="color: #ffcc57; font-size: medium"
+                >&nbsp;For Class 8<sup>th</sup> Class 9<sup>th</sup> & Class
+                10<sup>th</sup></span
+              >
+            </h6>
+          </button>
+        </h2>
+        <div
+          id="collapseFive"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <ul style="line-height: 23px; font-weight: bold; padding: 0px 15px">
+              <li style="font-weight: 500">
+                One-Year Integrated Classroom Course for Olympiads &amp; Class
+                VIII (For Class 7th Studying Students moving to Class 8th)
+              </li>
+              <li style="font-weight: 500">
+                One-Year Integrated Classroom Course for Olympiads and Class IX
+                (For Class 8th Studying Students moving to Class 9th)
+              </li>
+              <li style="font-weight: 500">
+                One-Year Integrated Classroom Course for Olympiads, KVPY, NTSE
+                &amp; Class X (For Class 9th Studying Students moving to Class
+                10th)
+              </li>
+              <li style="font-weight: 500">
+                Two-Year Integrated Classroom Course for Olympiads, KVPY, NTSE
+                &amp; Class IX &amp; X (For Class 8th Studying Students moving
+                to Class 9th)
+              </li>
+              <li style="font-weight: 500">
+                Three-Year Integrated Classroom Course for Olympiads, KVPY, NTSE
+                and Class VIII, IX &amp; X (For Class 7th Studying Students
+                moving to Class 8th)
+              </li>
+            </ul>
+            <table
+              class="table table-bordered table-striped"
+              style="line-height: 23px"
+              width="80%"
+            >
+              <tbody>
+                <tr>
+                  <td><b>Course Highlights</b></td>
+                  <td><b>Additional Benefits </b></td>
+                </tr>
+                <tr>
+                  <td>Thorough preparation for school/board exams</td>
+                  <td>
+                    Micro Assignment - a special booklet of NCERT (questions for
+                    better practice)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Class VIII, IX, X Syllabus Coverage with Revision &amp;
+                    Doubt Clearance
+                  </td>
+                  <td>
+                    Fast Track &amp; Trickopedia - unique tricks &amp; tips to
+                    increase speed
+                  </td>
+                </tr>
+                <tr>
+                  <td>Special Classes for NTSE preparation for Class X</td>
+                  <td>
+                    Special classes &amp; test series for Olympiad/scholarship
+                    exams
+                  </td>
+                </tr>
+                <tr>
+                  <td>Extensive and in-depth study material</td>
+                  <td>Mental ability preparation</td>
+                </tr>
+                <tr>
+                  <td>
+                    Regular tests on school /board, Olympiad, NTSE pattern
+                  </td>
+                  <td colspan="2">EduTutor Lab Facility</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- courses end -->
+
+    <div class="headings hidden">
+      <h1>Competitive Exams</h1>
+    </div>
+
+    <!-- Exams start -->
+
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <!-- Jee Advanced --><br /><br />
+      <div
+        style="
+          box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+          width: 97%;
+          border-radius: 10px;
+          margin: auto;
+        "
+        class="bg-primary-subtle hidden"
+      >
+        <div
+          class="img-thumbnail bg-primary-subtle hidden"
+          style="float: left; padding: 1%"
+        >
+          <img
+            src="images/jee-adv.jfif"
+            class="img-thumbnail"
+            style="height: 200px; width: 200px; border-radius: 5%"
+          />
+        </div>
+
+        <div
+          style="width: 97%; align-items: center; padding: 3%"
+          class="hidden"
+        >
+          <dl>
+            <dt>Jee Advanced</dt>
+            <dd>
+              Indian Institutes of Technology (IITs) are institutions of
+              national importance established through Acts of Parliament for
+              fostering excellence in education.
+            </dd>
+            <dd>
+              Admission to various undergraduate programs across IITs is carried
+              out through the Joint Entrance Examination (Advanced) [JEE
+              (Advanced)].
+            </dd>
+            <dd>
+              Through JEE (Advanced), IITs offer admission into undergraduate
+              courses leading to a Bachelors, Integrated Masters,
+              Bachelor-Master Dual Degree in Engineering, Sciences, or
+              Architecture.
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <br />
+
+      <!--Jee Mains -->
+      <div
+        style="
+          box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+          width: 97%;
+          border-radius: 10px;
+        "
+        class="bg-primary-subtle hidden"
+      >
+        <div
+          class="img-thumbnail bg-primary-subtle hidden"
+          style="float: right; padding: 1%"
+        >
+          <img
+            src="images/jee-mains.jfif"
+            style="height: 200px; width: 200px; border-radius: 5%"
+          />
+        </div>
+
+        <div
+          style="width: 97%; align-items: center; padding: 3%"
+          class="hidden"
+        >
+          <dl>
+            <dt>Jee Mains</dt>
+            <dd>
+              The Joint Entrance Examination, JEE (Main) comprises two papers.
+              Paper 1 is conducted for admission to Undergraduate Engineering
+              Programs (B.E/B.Tech.) at NITs, IIITs, other Centrally Funded
+              Technical Institutions (CFTIs), and Institutions/Universities
+              funded/recognized by participating State Governments.
+            </dd>
+            <dd>
+              JEE (Main) is also an eligibility test for JEE (Advanced), which
+              is conducted for admission to IITs.
+            </dd>
+            <dd>
+              Paper 2 is conducted for admission to B. Arch and B. Planning
+              courses in the country.
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <br />
+
+      <!-- NEET -->
+      <div
+        style="
+          box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+          width: 97%;
+          border-radius: 10px;
+        "
+        class="bg-primary-subtle hidden"
+      >
+        <div
+          class="img-thumbnail bg-primary-subtle hidden"
+          style="float: left; padding: 1%"
+        >
+          <img
+            src="images/neet.jfif"
+            style="height: 200px; width: 200px; border-radius: 5%"
+          />
+        </div>
+
+        <div
+          style="width: 97%; align-items: center; padding: 3%"
+          class="hidden"
+        >
+          <dl>
+            <dt>NEET</dt>
+            <dd>
+              The NEET (UG) has been conducted as a common and uniform National
+              Eligibility-cum-Entrance Test [NEET (UG)] for admission to
+              undergraduate medical education in all medical institutions.
+            </dd>
+            <dd>
+              The NEET (UG) - 2023 is going to be conducted by NTA as per the
+              Schedule given in the Information at a Glance for admission to
+              MBBS, BDS, BAMS, BSMS, BUMS, and BHMS Courses under the medical
+              institutions governed as per the relevant
+              norms/guidelines/regulations notified by the concerned Regulatory
+              Bodies under the NCISM Act, 2020 and NCH Act, 2020.
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <br />
+
+      <!-- NTSE -->
+      <div
+        style="
+          box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+          width: 97%;
+          border-radius: 10px;
+        "
+        class="bg-primary-subtle hidden"
+      >
+        <div
+          class="img-thumbnail bg-primary-subtle hidden"
+          style="float: right; padding: 1%"
+        >
+          <img
+            src="images/ntse.jfif"
+            style="height: 200px; width: 200px; border-radius: 5%"
+          />
+        </div>
+        <div
+          style="width: 97%; align-items: center; padding: 3%"
+          class="hidden"
+        >
+          <dl>
+            <dt>NTSE</dt>
+            <dd>
+              NTSE exam is the National level scholarship program by Govt. of
+              India and most venerated exam of India.
+            </dd>
+            <dd>
+              It is not only about scholarship but a matter of great pride and
+              honour for every student to be recognised as the nation’s talent.
+            </dd>
+            <dd>
+              The NTSE (National Talent Search Examination) examination is
+              conducted every year at two levels – Stage I (State level) and
+              Stage II (National Level). NTSE Stage I is conducted by States and
+              NTSE Stage II is conducted by NCERT.
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <br />
+
+      <!-- KVPY -->
+      <div
+        style="
+          box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+          width: 97%;
+          border-radius: 10px;
+        "
+        class="bg-primary-subtle hidden"
+      >
+        <div
+          class="img-thumbnail bg-primary-subtle hidden"
+          style="float: left; padding: 1%"
+        >
+          <img
+            src="images/kvpy.jfif"
+            style="height: 200px; width: 200px; border-radius: 5%"
+          />
+        </div>
+
+        <div
+          style="width: 97%; align-items: center; padding: 3%"
+          class="hidden"
+        >
+          <dl>
+            <dt>KVPY</dt>
+            <dd>
+              The "Kishore Vaigyanik Protsahan Yojana" (KVPY) is a program
+              started in 1999 by the Department of Science and Technology (DST),
+              Government of India to encourage students who are studying Basic
+              Sciences to take up research career in Science.
+            </dd>
+            <dd>
+              The aim of the program is to identify and encourage talented and
+              motivated students to pursue career in research.
+            </dd>
+            <dd>
+              Generous fellowship and contingency grant are provided to the
+              selected KVPY Fellows up to the pre Ph.D. level or 5 years
+              whichever is earlier.
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- Exams end -->
+    <!-- rankers heading -->
+    <div class="headings hidden">
+      <h1>Our Results-2023</h1>
+    </div>
+    <!-- results start -->
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <!-- jee-advanced results -->
+      <div
+        class="card mb-3s"
+        style="width: 97%; border-radius: 10px; margin-top: 30px"
+      >
+        <div class="card-header hidden" style="background-color: #1b244d">
+          <h3 style="text-align: center; color: white">JEE-ADVANCED</h3>
+        </div>
+        <div
+          class="card-body bg-primary-subtle text-bg-light hiddem"
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          "
+        >
+          <!-- vatsal koisa -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-24 at 4.08.57 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Vatsal Koisa</h4>
+              <h5 style="text-align: center">AIR-12</h5>
+              <h6 style="text-align: center">4 years integrated classroom</h6>
+            </div>
+          </div>
+          <!-- harsh trada -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-24 at 4.09.05 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Harsh Trada</h4>
+              <h5 style="text-align: center">AIR-46</h5>
+              <h6 style="text-align: center">4 years integrated classroom</h6>
+            </div>
+          </div>
+          <!-- jay kikani -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 3.11.28 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Jay Kikani</h4>
+              <h5 style="text-align: center">AIR-254</h5>
+              <h6 style="text-align: center">3 years integrated classroom</h6>
+            </div>
+          </div>
+          <!-- Princy khatiwada -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-24 at 4.13.30 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Princy Khatiwada</h4>
+              <h5 style="text-align: center">AIR-296</h5>
+              <h6 style="text-align: center">3 years integrated classroom</h6>
+            </div>
+          </div>
+          <!-- Aashutosh mishra -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-24 at 3.59.41 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Aashutosh Mishra</h4>
+              <h5 style="text-align: center">AIR-745</h5>
+              <h6 style="text-align: center">2 years integrated classroom</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NEET-UG results -->
+      <div
+        class="card mb-3"
+        style="width: 97%; border-radius: 10px; margin-top: 50px"
+      >
+        <div class="card-header hidden" style="background-color: #1b244d">
+          <h3 style="text-align: center; color: white">NEET-UG</h3>
+        </div>
+        <div
+          class="card-body bg-primary-subtle text-bg-light"
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          "
+        >
+          <!-- tanishka khapra -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 2.20.13 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Tanishka Khapra</h4>
+              <h5 style="text-align: center">AIR-7</h5>
+              <h6 style="text-align: center">4 years integrated classroom</h6>
+            </div>
+          </div>
+          <!-- parth tiwari -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 2.17.35 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Parth Tiwari</h4>
+              <h5 style="text-align: center">AIR-104</h5>
+              <h6 style="text-align: center">4 years integrated classroom</h6>
+            </div>
+          </div>
+          <!-- guthi sindhu -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 2.20.47 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Guthi Sindhu</h4>
+              <h5 style="text-align: center">AIR-367</h5>
+              <h6 style="text-align: center">4 years integrated classroom</h6>
+            </div>
+          </div>
+          <!-- tummala snikitha -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 2.19.29 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Tummala Snikitha</h4>
+              <h5 style="text-align: center">AIR-531</h5>
+              <h6 style="text-align: center">3 years integrated classroom</h6>
+            </div>
+          </div>
+          <!-- vineet sharma -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 2.33.35 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Vineet Sharma</h4>
+              <h5 style="text-align: center">AIR-644</h5>
+              <h6 style="text-align: center">2 years integrated classroom</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CBSE boards results -->
+      <div
+        class="card mb-3"
+        style="width: 97%; border-radius: 10px; margin-top: 50px"
+      >
+        <div class="card-header hidden" style="background-color: #1b244d">
+          <h3 style="text-align: center; color: white">
+            CBSE 12<sup>th</sup> boards
+          </h3>
+        </div>
+        <div
+          class="card-body bg-primary-subtle text-bg-light"
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          "
+        >
+          <!-- nandini garg -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 3.29.12 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Nandini Garg</h4>
+              <h5 style="text-align: center">499/500</h5>
+              <h6 style="text-align: center">
+                2 years integrated classroom | (CBSE Boards Course)
+              </h6>
+            </div>
+          </div>
+          <!-- Vatsal Koisa -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-24 at 4.08.57 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Vatsal Koisa</h4>
+              <h5 style="text-align: center">499/500</h5>
+              <h6 style="text-align: center">
+                4 years integrated classroom | (Engineering Entrance Course)
+              </h6>
+            </div>
+          </div>
+          <!-- adwai krishna -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-24 at 3.12.33 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Adwai Krishna</h4>
+              <h5 style="text-align: center">495/500</h5>
+              <h6 style="text-align: center">
+                2 years integrated classroom | (CBSE boards Course)
+              </h6>
+            </div>
+          </div>
+          <!-- tanishka khapra -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 2.20.13 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Tanishka Khapra</h4>
+              <h5 style="text-align: center">494/500</h5>
+              <h6 style="text-align: center">
+                4 years integrated classroom | (Medical Entrance Course)
+              </h6>
+            </div>
+          </div>
+          <!-- vineet sharma -->
+          <div
+            class="card rankers hidden"
+            style="
+              width: 15rem;
+              padding-top: 10px;
+              box-shadow: 2px 9px 15px 3px rgba(0, 0, 0, 0.3);
+              border-radius: 10px;
+              margin-bottom: 15px;
+              transition: 0.2s linear;
+            "
+          >
+            <img
+              src="images/WhatsApp Image 2023-07-25 at 2.33.35 PM.jpeg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-radius: 196px;
+                height: 170px;
+                width: 170px;
+                display: flex;
+                align-self: center;
+                border: 3px solid black;
+              "
+            />
+            <div class="card-body hidden">
+              <h4 style="text-align: center">Vineet Sharma</h4>
+              <h5 style="text-align: center">490/500</h5>
+              <h6 style="text-align: center">
+                2 years integrated classroom | (Medical Entrance Course)
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden">
+        <span style="font-weight: bold; font-size: x-large">And many more</span
+        >&nbsp;<span><img src="images/icons8-loading.gif" /></span><br /><br />
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer
+      class="py-5"
+      style="
+        padding: 5%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+      "
+    >
+      <div class="row">
+        <div class="col-6 col-md-6 mb-3">
+          <img
+            src="images/logo.png"
+            alt="Can't load"
+            style="height: 50px; width: 200px; margin-left: -32px"
+          />
+          <br />
+
+          <div style="position: relative; top: 22px">Follow Us :</div>
+          <div class="wrapper" style="position: relative; left: 150px">
+            <div class="one">
+              <button class="button">
+                <i class="ri-share-line"></i>
+              </button>
+            </div>
+            <div class="two">
+              <ul class="list">
+                <li class="item">
+                  <a href="#" class="link ig">
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                </li>
+                <li class="item" style="--d: 0.25s">
+                  <a href="#" class="link tw">
+                    <i class="ri-twitter-line"></i>
+                  </a>
+                </li>
+                <li class="item" style="--d: 0.5s">
+                  <a href="#" class="link sc">
+                    <i class="ri-snapchat-line"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            const btnEl = document.querySelector(".button");
+            const toggleOptions = () => {
+              const wrapperEl = document.querySelector(".wrapper");
+              const iconEl = btnEl.querySelector("i");
+
+              wrapperEl.classList.toggle("activ");
+
+              if (iconEl.classList.contains("ri-share-line")) {
+                iconEl.classList.replace("ri-share-line", "ri-close-line");
+              } else {
+                iconEl.classList.replace("ri-close-line", "ri-share-line");
+              }
+            };
+            btnEl.addEventListener("click", toggleOptions);
+          </script>
+          <br /><br /><br /><br />
+
+          <h3>Important Links</h3>
+          <ul class="nav">
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="/index" class="nav-link p-0 text-white">Home</a>
+            </li>
+
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="/terms" class="nav-link p-0 text-white"
+                >Terms & Conditions</a
+              >
+            </li>
+
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="/privacy" class="nav-link p-0 text-white"
+                >Privacy Policy</a
+              >
+            </li>
+
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="/refund" class="nav-link p-0 text-white"
+                >Refund & Cancellation Policy</a
+              >
+            </li>
+
+            <li class="nav-item mb-2" style="margin-right: 15px">
+              <a href="/about" class="nav-link p-0 text-white">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                id="newsletter1"
+                type="email"
+                class="form-control"
+                placeholder="Email address"
+              />
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br />
+
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+      >
+        <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="scroll.js">
+    
+  </script>
+</html>

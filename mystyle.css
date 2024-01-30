@@ -1,0 +1,366 @@
+body {
+  padding-top: 76px;
+}
+
+.headings {
+  text-align: center;
+  color: #393185;
+  font-weight: 600;
+  font-size: 34px;
+  position: relative;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.headings::after {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, #707070, transparent);
+  bottom: -14px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Gallry Allbum */
+.Gallery_main {
+  padding: 40px 0;
+}
+
+.gallery .gallery_box {
+  position: relative;
+  box-shadow: 2px 2px 5px #777;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.gallery .gallery_box .g_img img {
+  width: 100%;
+  height: 220px;
+  transition: all 2s ease-in-out;
+}
+
+.gallery .gallery_box:hover .g_img img {
+  transform: scale(1.2);
+}
+
+.gallery .gallery_box .g_title {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: rgb(3, 3, 105);
+  transition: all 0.7s;
+  z-index: 5;
+}
+
+.gallery .gallery_box:hover .g_title {
+  transform: scaleY(1);
+  top: 42%;
+  transition: all 0.7s;
+}
+
+.gallery .gallery_box .g_title h5 {
+  margin: 0;
+  padding: 6px 15px;
+  color: #fff;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gallery .gallery_box .g_details {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(162, 217, 247, 0.5);
+  transform: scaleY(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.gallery .gallery_box:hover .g_details {
+  transform: scaleY(1);
+}
+
+/*------------------------------ About us page ----------------------*/
+
+.about_page {
+  padding: 60px 0;
+}
+
+.about_info h2 {
+  text-align: center;
+  color: #393185;
+  font-weight: 600;
+  font-size: 34px;
+  position: relative;
+}
+
+.about_info h2::after {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, #707070, transparent);
+  bottom: -14px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about_info .about_dtl {
+  margin: 50px 0;
+}
+
+.about_info .about_dtl .about_dtl_left {
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+  line-height: 1.8;
+  padding: 0 20px;
+}
+
+.about_info .about_dtl .about_dtl_right {
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+.about_feature h2 {
+  border-top: 1px solid #ddd;
+  text-align: center;
+  height: 8px;
+  margin: 100px 0 50px;
+  line-height: 1.5;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.about_feature h2 .Heading_text {
+  background: #fff;
+  padding: 0 8px;
+  position: relative;
+  top: -18px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.a_feature_box {
+  margin: 10px 0 40px;
+  padding: 10px;
+  display: inline-flex;
+}
+
+.a_feature_box .feature_img {
+  flex: none;
+}
+
+.a_feature_box .feature_img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid #b9bbbd;
+  transition: all 0.5s ease;
+}
+
+.a_feature_box .feature_img:hover img {
+  transform: skew(5deg, 5deg);
+  transition: all 0.5s ease;
+}
+
+.a_feature_box .feature_desc {
+  padding-left: 24px;
+}
+
+.about_page .counter_main {
+  margin: 50px 0;
+}
+
+/* Page Header  */
+
+.page_head {
+  height: 44px;
+  position: relative;
+}
+
+.page_head .breadcumb {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: inline-flex;
+  background-color: rgba(121, 194, 246, 0.5);
+  margin: 0;
+  padding: 10px 30px;
+}
+
+.page_head .breadcumb li {
+  padding-right: 10px;
+  color: #181616;
+}
+
+.page_head .breadcumb li a {
+  color: #0a0a0a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.page_head .breadcumb li.active {
+  color: #0b0b0b;
+}
+
+.page_head .breadcumb li::marker {
+  content: none;
+}
+
+/* Gap in refund, privacy, terms */
+
+.pt50 {
+  padding-top: 50px;
+}
+
+.pb50 {
+  padding-bottom: 50px;
+}
+
+.nav-link {
+  background: linear-gradient(currentColor 0 0) bottom center/ var(--underline-width, 0%) 0.1em no-repeat;
+  color: #f80;
+  display: inline-block;
+  padding: 0 0.5em 0.2em;
+  text-decoration: none;
+  transition: background-size 0.5s;
+}
+
+.nav-link:hover {
+  --underline-width: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.wrapper {
+  position: relative;
+  left: 30%;
+}
+
+.wrapper :is(.button, .link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  color: #151515;
+  border-radius: 50%;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.two {
+  z-index: 9;
+  margin: -32px;
+}
+
+.activ .button,
+.button:hover {
+  outline: 3px solid #0561ee;
+  outline-offset: -4px;
+}
+
+.item {
+  position: absolute;
+  list-style: none;
+  transition: transform 0.5s;
+  transition-delay: var(--d);
+}
+
+.wrapper.activ .item:nth-child(1) {
+  transform: translateX(-65px);
+}
+
+.wrapper.activ .item:nth-child(2) {
+  transform: translateY(-65px);
+}
+
+.wrapper.activ .item:nth-child(3) {
+  transform: translateX(65px);
+}
+
+.link:hover {
+  color: #fff;
+  transition: background-color 0.5s;
+}
+
+.ig:hover {
+  background-image: radial-gradient(circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%);
+}
+
+.tw:hover {
+  background-color: #1da1f2;
+}
+
+.sc:hover {
+  background-color: #fffc00;
+  color: inherit;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(35%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.accordian-item:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.accordian-item:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.accordian-item:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.rankers:hover {
+  transform: scale(1.05);
+}
+
+.rankers:nth-child(2) {
+  transition-delay: 0.5s;
+}
+
+.rankers:nth-child(3) {
+  transition-delay: 1s;
+}
+
+.rankers:nth-child(4) {
+  transition-delay: 1.5s;
+}
+
+.rankers:nth-child(5) {
+  transition-delay: 2s;
+}
